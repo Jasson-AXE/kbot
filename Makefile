@@ -27,4 +27,4 @@ push:
 
 clean:
 	rm -rf kbot
-	docker rmi ${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
+	docker rmi ghcr.io/${REGISTRY}/${APP}:${VERSION}-${TARGETARCH}
