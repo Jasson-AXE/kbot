@@ -8,9 +8,10 @@ replicaCount: 1
 # Overrides the image tag whose default is the chart appVersion.
 #  tag: "v1.0.5-f8b34c7"
 #  arch: amd64
+#
 Image:
   registry: "ghcr.io"
-  repository: "jasson-axe//kbot"
+  repository: "jasson-axe/kbot"
   tag: "v1.0.5-97cd54c"
   os: linux
   arch: amd64
