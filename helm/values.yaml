@@ -11,7 +11,7 @@ replicaCount: 1
 
 image:
   registry: "ghcr.io"
-  repository: "jassonaxe/kbot"
+  repository: "${REGISTRY}/${APP}"
   tag: "v1.0.5-8054aa8"
   os: linux
   arch: amd64
