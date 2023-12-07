@@ -29,7 +29,7 @@ jobs:       #Create new job with name CI
       - name: Build&Push
         env :
           APP: "kbot"
-          REGISTRY:: ${{ secrets.DOCKERHUB_USERNAME }}
+          REGISTRY: ghcr.io
         run: make image push
 
   cd:
