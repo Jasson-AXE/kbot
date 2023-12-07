@@ -22,4 +22,5 @@ secret:
 securityContext:
   privileged: true
 image:
-  tag: "v1.0.5-414d362"
+  tag: "v1.0.5-e0533cd"
+  arch: amd64
