@@ -5,6 +5,9 @@ on:
     branches:
       - develop
 
+env:
+  TARGETARCH: amd64
+
 
 jobs:       #Create new job with name CI
   ci:
@@ -49,7 +52,7 @@ jobs:       #Create new job with name CI
 
     - uses: mikefarah/yq@master
       with:
-        cmd: yq -i '.image.tag=strenv(VERSION)' helm/values.yaml
+        cmd: yq -i '.image.tag=strenv(VERSION) | .image.arch=strenv(TARGETARCH)' helm/values.yaml
 
     - run: |
         git config user.name github-actions
