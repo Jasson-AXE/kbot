@@ -21,4 +21,4 @@ secret:
 securityContext:
   privileged: true
 image:
-  tag: v1.0.5-2e1042c
+  tag: v1.0.5-56a9645
