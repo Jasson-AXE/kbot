@@ -9,7 +9,7 @@ replicaCount: 1
 #  tag: "v1.0.5-f8b34c7"
 #  arch: amd64
 #
-Image:
+image:
   registry: "ghcr.io"
   repository: "jasson-axe/kbot"
   tag: "v1.0.5-97cd54c"
@@ -22,8 +22,4 @@ secret:
 securityContext:
   privileged: true
 image:
-<<<<<<< HEAD
-  tag: v1.0.5-a0f96f1
-=======
-  tag: v1.0.5-97cd54c
->>>>>>> 0cfb883 (main version)
+  tag: "v1.0.5-97cd54c"
