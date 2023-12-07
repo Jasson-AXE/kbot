@@ -30,7 +30,9 @@ jobs:       #Create new job with name CI
         env :
           APP: "kbot"
           REGISTRY: ghcr.io
-        run: make image push
+        run: make image push TARGETARCH=$TARGETARCH
+      - name: Clean
+        run: make clean TARGETARCH=$TARGETARCH
 
   cd:
     name: CD
