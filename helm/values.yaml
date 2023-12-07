@@ -21,6 +21,3 @@ secret:
   key: "token"
 securityContext:
   privileged: true
-image:
-  tag: "v1.0.5-002af2a"
-  arch: amd64
