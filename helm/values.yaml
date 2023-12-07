@@ -3,11 +3,11 @@
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
-image:
-  repository: "jassonaxe"
+#image:
+#  repository: "jassonaxe"
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v1.0.5-f8b34c7"
-  arch: amd64
+#  tag: "v1.0.5-f8b34c7"
+#  arch: amd64
 Image:
   registry: "ghcr.io"
   repository: "jassonaxe/kbot"
