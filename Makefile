@@ -1,8 +1,9 @@
 APP := $(shell basename $(shell git remote get-url origin))
 REGISTRY := jasson-axe
+GHCR_REGISTRY := ghcr.io
 VERSION=$(shell git describe --tags --abbrev=0)-$(shell git rev-parse --short HEAD)
 TARGETOS=linux
-TARGETARCH=amd64
+TARGETARCH=amd64 
 TAG := ${VERSION}-${TARGETOS}-${TARGETARCH}
 
 format:
@@ -22,12 +23,12 @@ build: format get
 
 image:
     # docker build . -t ${REGISTRY}/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
-	docker build . -t ghcr.io/${REGISTRY}/${APP}:${TAG} --build-arg TARGETARCH=${TARGETARCH}
+	docker build . -t ${GHCR_REGISTRY}/${REGISTRY}/${APP}:${TAG} --build-arg TARGETARCH=${TARGETARCH}
 
 push:
     # docker push ${REGISTRY}/${APP}:${VERSION}-${TARGETOS}-${TARGETARCH}
-	docker push ghcr.io/${REGISTRY}/${APP}:${TAG}
+	docker push ${GHCR_REGISTRY}/${REGISTRY}/${APP}:${TAG}
 
 clean:
 	rm -rf kbot
-	docker rmi ghcr.io/${REGISTRY}/${APP}:${TAG}
+	docker rmi ${GHCR_REGISTRY}/${REGISTRY}/${APP}:${TAG}
