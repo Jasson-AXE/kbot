@@ -22,4 +22,8 @@ secret:
 securityContext:
   privileged: true
 image:
+<<<<<<< HEAD
   tag: v1.0.5-a0f96f1
+=======
+  tag: v1.0.5-97cd54c
+>>>>>>> 0cfb883 (main version)
