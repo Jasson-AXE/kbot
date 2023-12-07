@@ -10,7 +10,7 @@ replicaCount: 1
 #  arch: amd64
 Image:
   registry: "ghcr.io"
-  repository: "jassonaxe/kbot"
+  repository: "jasson-axe//kbot"
   tag: "v1.0.5-97cd54c"
   os: linux
   arch: amd64
